@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 router.get('/all', (req, res) => {
     // console.log("/all")
-    mysqlConn.query('select * from account', (err, rows, fields) => {
+    mysqlConn.query('select Acc_no,Acc_Cust_id,acc_balance from account', (err, rows, fields) => {
         if (!err) {
             res.send(rows);
 
